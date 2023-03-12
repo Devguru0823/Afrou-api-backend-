@@ -1,0 +1,42 @@
+{
+    "name": "ad_request",
+    "collection_name": "ad_request",
+    "properties": {
+      "ad_request_id": {
+        "type": "number",
+        "required": true,
+        "primary_key": true
+      },
+      "name_of_organisation": {
+        "type": "string",
+        "required": true
+      },
+      "ad_duration": {
+        "type": "number",
+        "required": true
+      },
+      "ad_request_description": {
+        "type": "string",
+        "required": true
+      },
+      "requested_by": {
+          "type": "number",
+          "required": true
+      },
+      "ad_request_status": {
+        "type": "enum",
+        "required": true,
+        "enum": [
+          "active",
+          "inactive",
+          "archived"
+        ],
+        "default": "active"
+      },
+      "created_date":{
+        "type": "date",
+        "required": "true",
+        "default": "now"
+      }
+    }
+}

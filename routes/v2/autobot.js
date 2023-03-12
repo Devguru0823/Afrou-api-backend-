@@ -1,10 +1,11 @@
 var express = require('express');
 var router = express.Router();
+const autobotModel = require('../../models/v2/autobot');
 const Model = require('../../models/v2/autobot');
 // const AUTH = require('../_helpers/authentication');
 
 router.post('/register', function(req, res, next) {
-    Model.registerUser(req, res, function (err, response) {
+    autobotModel.registerUser(req, res, function (err, response) {
         if(err) {
             next(err);
         } else {
@@ -14,7 +15,7 @@ router.post('/register', function(req, res, next) {
 });
 
 router.post('/followuser', function(req, res, next) {
-    Model.usertofollow(req, res, function (err, response) {
+    autobotModel.usertofollow(req, res, function (err, response) {
         if(err) {
             next(err);
         } else {

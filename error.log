@@ -1,0 +1,26 @@
+{"level":"error","service":"error-service"}
+{"level":"error","service":"error-service"}
+{"level":"error","service":"error-service"}
+{"level":"error","service":"error-service"}
+{"level":"error","service":"error-service"}
+{"code":"ER_DUP_ENTRY","errno":1062,"index":0,"level":"error","service":"error-service","sql":"INSERT INTO sequence SET `collection` = 'ad_request', `counter` = 1","sqlMessage":"Duplicate entry '0' for key 'PRIMARY'","sqlState":"23000"}
+{"code":"ER_DUP_ENTRY","errno":1062,"index":0,"level":"error","service":"error-service","sql":"INSERT INTO ad_request SET `name_of_organisation` = 'perfomancedev', `ad_duration` = 12, `ad_request_description` = 'this is test ad-request comments', `requested_by` = 1004, `ad_request_status` = 'active', `created_date` = '2023-03-09 15:05:52.972', `ad_request_id` = 23","sqlMessage":"Duplicate entry '0' for key 'PRIMARY'","sqlState":"23000"}
+{"code":"ER_DUP_ENTRY","errno":1062,"index":0,"level":"error","service":"error-service","sql":"INSERT INTO ad_request SET `name_of_organisation` = 'perfomancedev', `ad_duration` = 12, `ad_request_description` = 'this is test ad-request comments', `requested_by` = 1004, `ad_request_status` = 'active', `created_date` = '2023-03-09 15:07:32.405', `ad_request_id` = 24","sqlMessage":"Duplicate entry '0' for key 'PRIMARY'","sqlState":"23000"}
+{"code":"ER_DUP_ENTRY","errno":1062,"index":0,"level":"error","service":"error-service","sql":"INSERT INTO ad_request SET `name_of_organisation` = 'perfomancedev', `ad_duration` = 12, `ad_request_description` = 'this is test ad-request comments', `requested_by` = 1004, `ad_request_status` = 'active', `created_date` = '2023-03-09 15:10:44.098', `ad_request_id` = 27","sqlMessage":"Duplicate entry '0' for key 'PRIMARY'","sqlState":"23000"}
+{"code":"ER_DUP_ENTRY","errno":1062,"index":0,"level":"error","service":"error-service","sql":"INSERT INTO ad_request SET `name_of_organisation` = 'perfomancedev', `ad_duration` = 12, `ad_request_description` = 'this is test ad-request comments', `requested_by` = 1004, `ad_request_status` = 'active', `created_date` = '2023-03-09 15:11:04.994', `ad_request_id` = 28","sqlMessage":"Duplicate entry '0' for key 'PRIMARY'","sqlState":"23000"}
+{"code":"ER_DUP_ENTRY","errno":1062,"index":0,"level":"error","service":"error-service","sql":"INSERT INTO ad_request SET `name_of_organisation` = 'perfomancedev', `ad_duration` = 12, `ad_request_description` = 'this is test ad-request comments', `requested_by` = 1004, `ad_request_status` = 'active', `created_date` = '2023-03-09 15:11:25.658', `ad_request_id` = 29","sqlMessage":"Duplicate entry '0' for key 'PRIMARY'","sqlState":"23000"}
+{"code":"ER_DUP_ENTRY","errno":1062,"index":0,"level":"error","service":"error-service","sql":"INSERT INTO ad_request SET `name_of_organisation` = 'perfomancedev', `ad_duration` = 12, `ad_request_description` = 'this is test ad-request comments', `requested_by` = 1004, `ad_request_status` = 'active', `created_date` = '2023-03-09 15:12:54.685', `ad_request_id` = 30","sqlMessage":"Duplicate entry '0' for key 'PRIMARY'","sqlState":"23000"}
+{"level":"error","service":"error-service"}
+{"level":"error","service":"error-service"}
+{"level":"error","service":"error-service"}
+{"level":"error","service":"error-service"}
+{"level":"error","service":"error-service"}
+{"level":"error","service":"error-service"}
+{"level":"error","service":"error-service"}
+{"level":"error","service":"error-service"}
+{"level":"error","service":"error-service"}
+{"level":"error","service":"error-service"}
+{"level":"error","service":"error-service"}
+{"code":"ER_PARSE_ERROR","errno":1064,"index":0,"level":"error","service":"error-service","sql":"SELECT * FROM advert where status = `status` = 'active', `adtype` = 'Mobile Ad' AND adtype != ? ORDER BY RAND() LIMIT 2","sqlMessage":"You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' `adtype` = 'Mobile Ad' AND adtype != ? ORDER BY RAND() LIMIT 2' at line 1","sqlState":"42000"}
+{"affectedRows":1,"changedRows":0,"fieldCount":0,"insertId":0,"level":"error","message":"(Rows matched: 1  Changed: 0  Warnings: 0","protocol41":true,"serverStatus":34,"service":"error-service","warningCount":0}
+{"affectedRows":1,"changedRows":0,"fieldCount":0,"insertId":0,"level":"error","message":"(Rows matched: 1  Changed: 0  Warnings: 0","protocol41":true,"serverStatus":34,"service":"error-service","warningCount":0}

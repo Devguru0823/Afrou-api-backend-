@@ -1,0 +1,40 @@
+{
+    "name": "friend_request",
+    "collection_name": "follow_request",
+    "properties": {
+      "request_id": {
+        "type": "number",
+        "required": true,
+        "primary_key": true
+      },
+      "requested_to": {
+          "type": "number",
+          "required": true
+      },
+      "requested_by": {
+        "type": "number",
+        "required": true
+      },
+      "requested_date": {
+        "type": "date",
+        "required": true,
+        "default": "now"
+      },
+      "request_status": {
+        "type": "enum",
+        "required": true,
+        "enum": [
+          "sent",
+          "accepted",
+          "archived"
+        ],
+        "default": "sent"
+      },
+      "created_date":{
+        "type": "date",
+        "required": "true",
+        "default": "now"
+      }
+      
+    }
+}

@@ -60,6 +60,7 @@
 		"morgan": "~1.10.0",
 		"multer": "^1.4.4",
 		"multer-s3": "^2.10.0",
+		"mysql": "^2.18.1",
 		"node-async-loop": "^1.2.2",
 		"node-cron": "^3.0.0",
 		"node-gyp": "^8.4.1",
@@ -73,6 +74,7 @@
 		"request": "^2.88.0",
 		"request-promise-native": "^1.0.8",
 		"sanitize-html": "^2.7.0",
+		"sequelize": "^6.29.1",
 		"sharp": "^0.30.1",
 		"slugify": "^1.6.5",
 		"socket.io": "^4.4.1",
@@ -84,6 +86,6 @@
 		"winston": "^3.6.0"
 	},
 	"devDependencies": {
-		"nodemon": "^2.0.20"
+		"nodemon": "^2.0.21"
 	}
 }

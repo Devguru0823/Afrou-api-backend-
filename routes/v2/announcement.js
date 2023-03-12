@@ -1,18 +1,13 @@
 var express = require('express');
 var router = express.Router();
-var utility = require('../../utilities');
-var Model = require('../../models/v2/announcement');
-var AUTH = require('../../_helpers/v2/authentication');
-
-// const MEDIA = require('../models/media');
-
-
+var utilities = require('../../utilitie');
+var announcementModel = require('../../models/v2/announcement');
 /**
  * Get announcement
  */
 router.get('/', function(req, res, next) {
-    utility.mongoConnect(req, res, function (client) {
-        Model.getAnnouncement(client, req, res, function (err, response) {
+    utilities.MysqlConnect(req, res, function (client) {
+        announcementModel.getAnnouncement(client, req, res, function (err, response) {
             client.close();
             if(err) {
                 next(err);
@@ -28,8 +23,8 @@ router.get('/', function(req, res, next) {
  * Add Or Update announcement
  */
 router.post('/', function(req, res, next) {
-    utility.mongoConnect(req, res, function (client) {
-        Model.addUpdateAnnouncement(client, req, res, function (err, response) {
+    utilities.MysqlConnect(req, res, function (client) {
+        announcementModel.addUpdateAnnouncement(client, req, res, function (err, response) {
             client.close();
             if(err) {
                 next(err);
@@ -40,5 +35,4 @@ router.post('/', function(req, res, next) {
         })
     });
 });
-
 module.exports = router;

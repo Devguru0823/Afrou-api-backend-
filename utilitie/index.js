@@ -1,9 +1,10 @@
 'use strict';
-let DB_CONNECTION = require('../configs/dbConnection');
-const DB_CONFIG = require('../configs/dbConfig');
+let DB_CONNECTION = require('../config/SqldbConnection');
+const DB_CONFIG = require('../config/SQLCONFIG.json');
 let async = require('async');
 const path = require('path');
-const { json } = require('body-parser');
+const { type } = require('os');
+const { counter } = require('speakeasy');
 require('fs')
 	.readdirSync(__dirname)
 	.forEach(function (file) {
@@ -32,8 +33,7 @@ module.exports.validatePostData = function (
 	instance_id,
 	cb
 ) {
-
-	let collection = CONNECTION.collection(Model.name);
+	let collection = CONNECTION.query(`SELECT * FROM ${Model.collection_name}`);  
 	let properties = Model.properties;
 
 	let validationErrors = {};
@@ -140,7 +140,6 @@ module.exports.validatePostData = function (
 					data.email != data[key] &&
 					data.contact_number != data[key]
 				) {
-					console.log('data.email===>', data.email);
 					checkUnique(
 						CONNECTION,
 						Model,
@@ -153,7 +152,6 @@ module.exports.validatePostData = function (
 								if (currentError.length > 0) {
 									validationErrors[key] = currentError;
 								}
-
 								callback();
 							} else {
 								currentError.push('should be unique');
@@ -235,7 +233,7 @@ module.exports.validatePostData = function (
  * @param res
  * @param cb
  */
-module.exports.mongoConnect = function (req, res, cb) {
+module.exports.MysqlConnect = function (req, res, cb) {
 	DB_CONNECTION.connect(function (err, client) {
 		if (err) {
 			console.log(err);
@@ -254,22 +252,30 @@ module.exports.mongoConnect = function (req, res, cb) {
  * @param Model
  * @param cb
  */
-let generatePrimaryKey = function (CONNECTION, Model, cb) {
-	let sequenceCollection = CONNECTION.collection('sequence');
-	let collectionName = Model.collection_name;
 
-	sequenceCollection.findOneAndUpdate(
-		{ collection: collectionName },
-		{ $inc: { counter: 1 } },
-		{
-			upsert: true,
-			returnOriginal: false,
-		},
-		function (err, updatedSequence) {
-			cb(err, updatedSequence?.value?.counter);
-			console.log('--------------------HHHHHHHHHEEEEEEEERRRRRRRRREEEEEEEEE------------------',updatedSequence);
-		}
-	);
+const getQuery = async (CONNECTION, collectionName) => {
+	return await new Promise((resolve, reject) =>{
+	CONNECTION.query("SELECT * FROM sequence WHERE collection=?",[collectionName], function (err, result) {
+		resolve(result[0]?.counter);
+	});
+	});
+}
+
+let generatePrimaryKey = async function (CONNECTION, Model, cb) {
+	let collectionName = Model.collection_name;
+	var check = 0;
+	check = await getQuery(CONNECTION, collectionName);
+	if(check == 0){
+		var post  = {collection: collectionName, counter: 1};
+		CONNECTION.query('INSERT INTO sequence SET ?', post, function (err, res) {
+			cb(err, 1);
+		});
+	}else{
+		CONNECTION.query(`UPDATE sequence SET counter = counter + 1 WHERE collection = ?`,
+		[collectionName], (err, res) => {
+			cb(err, check);
+		});
+	}
 };
 
 /**
@@ -292,8 +298,6 @@ let checkUnique = function (
 	instance_id,
 	cb
 ) {
-	let collection = CONNECTION.collection(Model.collection_name);
-
 	let primary_key = getPrimaryKeyFromModel(Model);
 	let condition = {};
 	condition[field_name] = value;
@@ -301,8 +305,8 @@ let checkUnique = function (
 		condition[primary_key] = { $ne: instance_id };
 	}
 
-	collection.countDocuments(condition, function (err, instanceCount) {
-		//console.log(err, instanceCount);
+	CONNECTION.countDocuments(condition, function (err, instanceCount) {
+
 		if (err) {
 			cb(false);
 		} else {
