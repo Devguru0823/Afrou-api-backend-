@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Chat test</title>
+		<link rel="stylesheet" href="../app/css/style.css" />
+	</head>
+	<body>
+		<div>
+			<br />
+			<b> Socket </b> <br />
+			<button onclick="getRoom()">Get Room</button>
+			<button onclick="getSocketId()">Get SocketID</button>
+
+			<br />
+			<hr />
+			<br />
+			<b> Message </b> <br />
+			<button onclick="sendMessage()">Send Message</button>
+			<button onclick="getMessages()">Get Message</button>
+			<button onclick="getMessageList()">Get Message List</button>
+			<button onclick="triggerNotificationNewMessage()">
+				Trigger notification (new message)
+			</button>
+			<button onclick="updateMessage()">Update Message</button>
+			<button onclick="likeMessage()">Like Message</button>
+			<button onclick="deleteMessage()">Delete Message</button>
+			<button onclick="replyMessage()">Reply Message</button>
+			<button onclick="deleteAllMessages()">Delete All Messages</button>
+			<button onclick="deleteSelectedMessages()">
+				Delete Selected Messages
+			</button>
+			<button onclick="getArchiveUsers()">Get Archive Users</button>
+			<button onclick="archiveUsers()">Archive Users</button>
+			<button onclick="removeArchiveUsers()">Remove Archive Users</button>
+			<button onclick="deleteUserfromMessageList()">
+				Delete user from message list
+			</button>
+
+			<br />
+			<hr />
+			<br />
+			<b> Group </b> <br />
+			<button onclick="createGroup()">Create Group</button>
+			<button onclick="addMemberToGroup()">Add member</button>
+			<button onclick="removeMemberFromGroup()">Remove member</button>
+			<button onclick="markMemberAsAdmin()">Mark member as Admin</button>
+			<button onclick="removeMemberFromAdmin()">
+				Remove member from Admin
+			</button>
+			<button onclick="getGroupMembers()">Get Group Members</button>
+			<button onclick="getGroups()">Get Groups</button>
+			<button onclick="getGroupById()">Get single Group</button>
+			<button onclick="editMessageGroup()">Edit Message Group</button>
+			<button onclick="deleteMessageGroup()">Delete Message Group</button>
+
+			<br />
+			<hr />
+			<br />
+			<b> Notification </b> <br />
+			<button onclick="getNotifications()">Get Notification</button>
+			<button onclick="getNotificationCounter()">Get Notification Count</button>
+
+			<br />
+			<hr />
+			<br />
+			<b> Call </b> <br />
+			<button onclick="callNotification()">Call notification</button>
+			<button onclick="callLog()">Get call history</button>
+			<button onclick="acceptCall()">Answer call</button>
+			<button onclick="endCall()">End call</button>
+			<button onclick="rejectCall()">Reject call</button>
+		</div>
+
+		<script src="../app/js/jquery-3.5.1.min.js"></script>
+		<!-- <script src="../node_modules/socket.io/client-dist/socket.io.min.js"></script> -->
+		<script src="/socket.io/socket.io.js"></script>
+		<script>
+			// const socket = io({transports: ['websocket']});
+			const socket=io.connect("localhost:3000");
+			// const socket = io.connect('https://manager.staging.afrocamgist.com:443');
+		</script>
+		<script src="../app/js/chat.js"></script>
+	</body>
+</html>

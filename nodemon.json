@@ -1,0 +1,8 @@
+{
+    "verbose": true,
+    "ignore": ["*.test.js", "fixtures/*","apollo.config.js","*.json"],
+    "execMap": {
+      "rb": "ruby",
+      "pde": "processing --sketch={{pwd}} --run"
+    }
+  }

@@ -1,0 +1,37 @@
+{
+	"name": "audience",
+	"collection_name": "audience",
+	"properties": {
+		"audience__id": {
+			"type": "string",
+			"required": true
+		},
+		"user_id": {
+			"type": "number",
+			"required": true
+		},
+		"age_range": {
+			"type": "string",
+			"required": true,
+			"max": 7
+		},
+		"name": {
+			"type": "string",
+			"required": true,
+			"max": 50,
+			"min": 4
+		},
+		"country": {
+			"type": "array",
+			"required": true
+		},
+		"interests": {
+			"type": "array",
+			"required": true
+		},
+		"gender": {
+			"type": "string",
+			"default": "all"
+		}
+	}
+}

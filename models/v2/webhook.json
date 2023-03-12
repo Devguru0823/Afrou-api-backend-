@@ -1,0 +1,26 @@
+{
+	"name": "webhook",
+	"collection_name": "webhook",
+	"properties": {
+		"webhook_id": {
+			"type": "string",
+			"required": true
+		},
+		"webhook_details": {
+			"type": "object",
+			"required": true
+		},
+		"orderID": {
+			"type": "string",
+			"required": true
+		},
+		"transaction_id": {
+			"type": "string",
+			"required": true
+		},
+		"user_id": {
+			"type": "number",
+			"required": true
+		}
+	}
+}

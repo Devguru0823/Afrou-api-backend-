@@ -1,0 +1,68 @@
+{
+    "name": "group",
+    "collection_name": "group",
+    "properties": {
+      "group_id": {
+        "type": "number",
+        "required": true,
+        "primary_key": true
+      },
+      "group_title": {
+        "type": "string",
+        "required": true
+      },
+      "group_description": {
+        "type": "string",
+        "required": true
+      },
+      "group_category": {
+        "type": "string",
+        "required": true
+      },
+      "group_image": {
+        "type": "string",
+        "required": true,
+        "default": "group_default.jpg"
+      },
+      "group_cover_image": {
+        "type": "string",
+        "required": true,
+        "default": "group_cover_default.jpg"
+      },
+      "created_by": {
+          "type": "number",
+          "required": true
+      },
+      "group_members": {
+          "type": "array",
+          "required":true
+      },
+      "group_admins": {
+        "type": "array",
+        "required":true
+      },
+      "group_invited_members": {
+        "type": "array"
+      },
+      "group_status": {
+        "type": "enum",
+        "required": true,
+        "enum": [
+          "active",
+          "inactive",
+          "archived"
+        ],
+        "default": "active"
+      },
+      "private": {
+        "type": "boolean",
+        "required": true,
+        "default": false
+      },
+      "created_date":{
+        "type": "date",
+        "required": "true",
+        "default": "now"
+      }
+    }
+}

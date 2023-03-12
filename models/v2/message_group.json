@@ -1,0 +1,35 @@
+{
+    "name": "message_group",
+    "collection_name": "message_group",
+    "properties": {
+      "message_group_id": {
+        "type": "number",
+        "required": true,
+        "primary_key": true
+      },
+      "created_by": {
+        "type": "number",
+        "required": true
+      },
+      "title": {
+        "type": "string",
+        "required": true,
+        "default": "Untitled"
+      },
+      "members": {
+        "type": "number",
+        "required": true,
+        "default": 0
+      },
+      "is_public": {
+        "type": "boolean",
+        "required": true,
+        "default": true
+      },
+      "created_date":{
+        "type": "date",
+        "required": "true",
+        "default": "now"
+      }
+    }
+}

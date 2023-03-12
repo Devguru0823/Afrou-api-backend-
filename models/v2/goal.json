@@ -1,0 +1,21 @@
+{
+	"name": "goal",
+	"collection_name": "goal",
+	"properties": {
+		"goal_id": {
+			"type": "string",
+			"required": true,
+			"max": 40
+		},
+		"goal_type": {
+			"type": "string",
+			"required": true,
+			"max": 50
+		},
+		"url": {
+			"type": "string",
+			"required": true,
+			"max": 500
+		}
+	}
+}

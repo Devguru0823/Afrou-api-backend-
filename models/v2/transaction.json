@@ -1,0 +1,20 @@
+{
+	"name": "transaction",
+	"collection_name": "transaction",
+	"properties": {
+		"transaction_id": {
+			"type": "string",
+			"required": true
+		},
+		"order": {
+			"type": "object",
+			"required": true
+		},
+		"captureID": {
+			"type": "string"
+		},
+		"user_id": {
+			"type": "number"
+		}
+	}
+}

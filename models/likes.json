@@ -1,0 +1,57 @@
+{
+  "name": "likes",
+  "collection_name": "likes",
+  "properties": {
+    "like_id": {
+      "type": "number",
+      "required": true,
+      "primary_key": true
+    },
+    "post_id": {
+        "type": "number",
+        "required": true,
+        "default": 0
+    },
+    "comment_id": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "story_id": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "message_id": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "like_type": {
+      "type": "enum",
+      "required": true,
+      "enum": [
+        "post",
+        "comment",
+        "story",
+        "storycomment",
+        "message"
+      ],
+      "default": "post"
+    },
+    "liked_by": {
+        "type": "number",
+        "required":true
+    },
+    "like_date": {
+      "type": "date",
+      "required": true,
+      "default": "now"
+    },
+    "created_date":{
+      "type": "date",
+      "required": "true",
+      "default": "now"
+    }
+  }
+}

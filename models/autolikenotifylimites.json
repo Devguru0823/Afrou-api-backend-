@@ -1,0 +1,35 @@
+{
+    "name": "autolikenotifylimites",
+    "collection_name": "autolikenotifylimites",
+    "properties": {
+      "aln_id": {
+          "type": "number",
+          "required": true,
+          "primary_key": true
+      },
+      "user_id": {
+          "type": "number",
+          "required": true
+      },
+      "notify_counter": {
+          "type": "number",
+          "required": true,
+          "default": 1
+      },
+      "start_date": {
+        "type": "date",
+        "required": "true",
+        "default": "now"
+      },
+      "limit_date": {
+        "type": "date",
+        "required": "true",
+        "default": "now"
+      },
+      "created_date": {
+        "type": "date",
+        "required": "true",
+        "default": "now"
+      }
+    }
+  }

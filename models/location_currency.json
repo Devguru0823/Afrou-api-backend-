@@ -1,0 +1,26 @@
+{
+    "name": "location_currency",
+    "collection_name": "localtion_currency",
+    "properties": {
+        "location_currency_id": {
+            "type": "string",
+            "required" : true
+        },
+        "country": {
+            "type": "string",
+            "required": true
+        },
+        "currency": {
+            "type": "string",
+            "required": true
+        },
+        "timezone": {
+            "type": "string",
+            "required": true
+        },
+        "user_id": {
+            "type": "number",
+            "required": true
+        }
+    }
+}

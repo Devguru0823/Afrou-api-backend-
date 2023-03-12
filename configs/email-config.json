@@ -1,0 +1,15 @@
+{
+  "config": {
+    "type": "SMTP",
+    "host": "smtp.gmail.com",
+    "secure": true,
+    "port": 465,
+    "auth": {
+      "user": "noreply@afrocamgist.com",
+      "pass": "Afro@123email"
+    }
+  },
+  "other":{
+    "mail_from": "AFROCAMGIST <noreply@afrocamgist.com>"
+  }
+}

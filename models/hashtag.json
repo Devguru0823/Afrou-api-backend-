@@ -1,0 +1,45 @@
+{
+    "name": "hashtags",
+    "collection_name": "hashtags",
+    "properties": {
+      "hashtag_id": {
+        "type": "number",
+        "required": true,
+        "primary_key": true
+      },
+      "hashtag_slug": {
+        "type": "string",
+        "required": true
+      },
+      "post_count": {
+        "type": "number",
+        "required": true,
+        "default": 1
+      },
+      "followers": {
+        "type": "array",
+        "required": true,
+        "default": []
+      },
+      "description": {
+        "type": "string",
+        "required": true,
+        "default": ""
+      },
+      "hashtag_status": {
+        "type": "enum",
+        "required": true,
+        "enum": [
+          "active",
+          "inactive",
+          "archived"
+        ],
+        "default": "active"
+      },
+      "created_date":{
+        "type": "date",
+        "required": "true",
+        "default": "now"
+      }
+    }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "blockips",
+  "collection_name": "blockips",
+  "properties": {
+    "ip_id": {
+      "type": "number",
+      "required": true,
+      "primary_key": true
+    },
+    "ipaddress": {
+      "type": "string",
+      "required": "true",
+      "default": ""
+    },
+    "created_date": {
+      "type": "date",
+      "required": "true",
+      "default": "now"
+    }
+  }
+}

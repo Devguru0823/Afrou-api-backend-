@@ -1,0 +1,28 @@
+{
+	"name": "budget_duration",
+	"collection_name": "budget_duration",
+	"properties": {
+		"budget_id": {
+			"type": "string",
+			"required": true,
+			"max": 40
+		},
+		"budget": {
+			"type": "number",
+			"required": true
+		},
+		"duration": {
+			"type": "number",
+			"required": true,
+			"max": ""
+		},
+		"currency": {
+			"type": "string",
+			"default": "USD"
+		},
+		"amount": {
+			"type": "number",
+			"required": true
+		}
+	}
+}

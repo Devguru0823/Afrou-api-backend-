@@ -1,0 +1,13 @@
+{
+	"accessTokenCollection": "access_token",
+	"refreshTokenCollection": "refresh_token",
+	"TwoFaCollection": "two_factor_auth",
+	"postsLimitPerPage": 12,
+	"notificationLimitPerPage": 10,
+	"messageLimitPerPage": 10,
+	"mediaBasePath": "./root/afro/cdn/uploads/",
+	"gcBasePath": "uploads/",
+	"s3Path": "cdn/uploads/",
+	"mostPopularPostsCount": 7,
+	"googleAPIKey": "AIzaSyCet9hQUKvNJTA_BHuJosRS1zeYnCpWHGc"
+}

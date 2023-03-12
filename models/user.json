@@ -1,0 +1,157 @@
+{
+  "name": "user",
+  "collection_name": "user",
+  "properties": {
+    "voip_id": {
+      "type": "string"
+    },
+    "device_id": {
+      "type": "string"
+    },
+    "user_id": {
+      "type": "number",
+      "required": true,
+      "primary_key": true
+    },
+    "first_name": {
+      "type": "string",
+      "required": true
+    },
+    "last_name": {
+      "type": "string",
+      "required": true
+    },
+    "facebook_id": {
+      "type": "string",
+      "unique": true
+    },
+    "google_id": {
+      "type": "string",
+      "unique": true
+    },
+    "email": {
+      "type": "email",
+      "unique": true
+    },
+    "password": {
+      "type": "string"
+    },
+    "date_of_birth": {
+      "type": "date"
+    },
+    "gender": {
+      "type": "enum",
+      "enum": ["M", "F"]
+    },
+    "contact_number": {
+      "type": "tel",
+      "unique": true
+    },
+    "about": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "nationality": {
+      "type": "string"
+    },
+    "religion": {
+      "type": "string"
+    },
+    "profile_image_url": {
+      "type": "string",
+      "required": true,
+      "default": "profile_default.jpg"
+    },
+    "cover_image_url": {
+      "type": "string",
+      "required": true,
+      "default": "cover_default.jpg"
+    },
+    "sports_interests": {
+      "type": "array"
+    },
+    "politics_interest": {
+      "type": "string"
+    },
+    "career_interest": {
+      "type": "string"
+    },
+    "friend_ids": {
+      "type": "array"
+    },
+    "follower_ids": {
+      "type": "array"
+    },
+    "following_ids": {
+      "type": "array"
+    },
+    "private": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "firebase_token": {
+      "type": "string",
+      "description": ""
+    },
+    "introduced": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "status": {
+      "type": "enum",
+      "required": true,
+      "enum": ["active", "inactive"],
+      "default": "inactive"
+    },
+    "created_date": {
+      "type": "date",
+      "required": "true",
+      "default": "now"
+    },
+    "OtpDateTime": {
+      "type": "date",
+      "required": "true",
+      "default": "now"
+    },
+    "updated_date": {
+      "type": "date"
+    },
+    "last_active": {
+      "type": "date",
+      "required": "true",
+      "default": "now"
+    },
+    "user_name": {
+      "type": "string",
+      "default": ""
+    },
+    "user_name_open": {
+      "type": "string",
+      "default": ""
+    },
+    "mostpopularpostseen": {
+      "type": "array",
+      "default": []
+    },
+    "register_device_detail": {
+      "type": "array",
+      "default": []
+    },
+    "login_device_detail": {
+      "type": "array",
+      "default": []
+    },
+    "profile_title": {
+      "type": "string",
+      "default": ""
+    },
+    "ipaddress": {
+      "type": "string",
+      "default": ""
+    }
+  }
+}

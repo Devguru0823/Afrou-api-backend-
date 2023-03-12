@@ -1,0 +1,34 @@
+{
+  "name": "tagged_user",
+  "collection_name": "tagged_user",
+  "properties": {
+    "tag_id": {
+      "type": "number",
+      "required": true,
+      "primary_key": true
+    },
+    "post_id": {
+      "type": "number",
+      "required": true
+    },
+    "to_id": {
+      "type": "array",
+      "required": true,
+      "default": []
+    },
+    "from_id": {
+      "type": "number",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "created_date": {
+      "type": "date",
+      "required": "true",
+      "default": "now"
+    }
+  }
+}

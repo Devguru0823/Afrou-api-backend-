@@ -1,0 +1,41 @@
+{
+    "name": "fonts",
+    "collection_name": "fonts",
+    "properties": {
+      "font_id": {
+        "type": "number",
+        "required": true,
+        "primary_key": true
+      },
+      "title": {
+        "type": "string",
+        "required": true,
+        "default": ""
+      },
+      "fontfile": {
+        "type": "string",
+        "required": true,
+        "default": ""
+      },
+      "cssfile": {
+        "type": "string",
+        "required": true,
+        "default": ""
+      },
+      "created_date": {
+        "type": "date",
+        "required": "true",
+        "default": "now"
+      },
+      "status": {
+        "type": "string",
+        "required": "true",
+        "default": "active"
+      },
+      "updated_date": {
+        "type": "date",
+        "required": "true",
+        "default": "now"
+      }
+    }
+  }

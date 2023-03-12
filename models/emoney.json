@@ -1,0 +1,76 @@
+{
+    "name": "emoney",
+    "collection_name": "emoney",
+    "properties": {
+      "emoney_id": {
+          "type": "number",
+          "required": true,
+          "primary_key": true
+      },
+      "sender_id": {
+          "type": "number",
+          "required": true,
+          "default": null
+      },
+      "sender_name": {
+        "type": "string",
+        "required": true
+      },
+      "sender_dob": {
+        "type": "string",
+        "required": true
+      },
+      "sender_country": {
+        "type": "string",
+        "required": true
+      },
+      "sender_currency": {
+        "type": "string",
+        "required": true
+      },
+      "sender_id_img": {
+        "type": "string",
+        "required": true
+      },
+      "receiver_id": {
+        "type": "number",
+        "required": true,
+        "default": null
+      },
+      "receiver_name": {
+        "type": "string",
+        "required": true
+      },
+      "receiver_email": {
+        "type": "string",
+        "required": true,
+        "default": null
+      },
+      "receiver_country": {
+        "type": "string",
+        "required": true
+      },
+      "receiver_currency": {
+        "type": "string",
+        "required": true
+      },
+      "receiver_postal_address": {
+        "type": "string",
+        "required": true,
+        "default": null
+      },
+      "receiver_bank_detail": {
+        "type": "string",
+        "required": true
+      },
+      "amount": {
+        "type": "string",
+        "required": true
+      },
+      "created_date": {
+        "type": "date",
+        "required": "true",
+        "default": "now"
+      }
+    }
+  }

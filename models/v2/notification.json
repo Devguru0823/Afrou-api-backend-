@@ -1,0 +1,53 @@
+{
+    "name": "notification",
+    "collection_name": "notification",
+    "properties": {
+      "notification_id": {
+        "type": "number",
+        "required": true,
+        "primary_key": true
+      },
+      "notification_details": {
+        "type": "object",
+        "required":true
+      },
+      "notification_type": {
+        "type": "enum",
+        "required": true,
+        "enum": [
+          "follow_user",
+          "unfollow_user",
+          "send_follow_request",
+          "accept_follow_request",
+          "post_comment",
+          "post_comment_reply",
+          "post_like",
+          "post_share",
+          "group_invite",
+          "group_invite_accept",
+          "group_post_report",
+          "add_group_post",
+          "user_tagged"
+        ]
+      },
+      "notify_users": {
+        "type": "array",
+        "required":true
+      },
+      "notification_status": {
+        "type": "enum",
+        "required": true,
+        "enum": [
+          "read",
+          "unread",
+          "archived"
+        ],
+        "default": "unread"
+      },
+      "created_date":{
+        "type": "date",
+        "required": "true",
+        "default": "now"
+      }
+    }
+}

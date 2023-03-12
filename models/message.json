@@ -1,0 +1,61 @@
+{
+    "name": "message",
+    "collection_name": "message",
+    "properties": {
+      "message_id": {
+        "type": "number",
+        "required": true,
+        "primary_key": true
+      },
+      "from_id": {
+        "type": "number",
+        "required": true
+      },
+      "to_id": {
+        "type": "number",
+        "required": true
+      },
+      "message_text": {
+        "type": "string"
+      },
+      "message_type": {
+        "type": "enum",
+        "enum": [
+          "replied"
+        ]
+      },
+      "message_reply_id": {
+        "type": "number"
+      },
+      "message_reply_text": {
+        "type": "string"
+      },
+      "message_image": {
+        "type": "string"
+      },
+      "message_status": {
+        "type": "enum",
+        "required": true,
+        "enum": [
+          "unread",
+          "read",
+          "archived",
+          "deleted"
+        ],
+        "default": "unread"
+      },
+      "like_count": {
+        "type": "number",
+        "default": 0
+      },
+      "created_date":{
+        "type": "date",
+        "required": "true",
+        "default": "now"
+      },
+      "archive_by": {
+        "type": "array",
+        "default": []
+      }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "name": "message_group_members",
+    "collection_name": "message_group_members",
+    "properties": {
+      "message_group_member_id": {
+        "type": "number",
+        "required": true,
+        "primary_key": true
+      },
+      "group_id": {
+        "type": "number",
+        "required": true
+      },
+      "member_id": {
+        "type": "number",
+        "required": true
+      },
+      "is_admin": {
+        "type": "boolean",
+        "required": true,
+        "default": false
+      },
+      "created_date":{
+        "type": "date",
+        "required": "true",
+        "default": "now"
+      }
+    }
+}

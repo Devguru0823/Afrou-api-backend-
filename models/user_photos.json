@@ -1,0 +1,39 @@
+{
+    "name": "user_photos",
+    "collection_name": "user_photos",
+    "properties": {
+      "user_photo_id": {
+        "type": "number",
+        "required": true,
+        "primary_key": true
+      },
+      "user_id": {
+          "type": "number",
+          "required": true
+      },
+      "image_url": {
+          "type": "string",
+          "required": true
+      },
+      "upload_date": {
+        "type": "date",
+        "required": true,
+        "default": "now"
+      },
+      "photo_status": {
+        "type": "enum",
+        "required": true,
+        "enum": [
+          "active",
+          "inactive",
+          "archived"
+        ],
+        "default": "active"
+      },
+      "created_date":{
+        "type": "date",
+        "required": "true",
+        "default": "now"
+      }
+    }
+}

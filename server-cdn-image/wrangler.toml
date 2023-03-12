@@ -1,0 +1,10 @@
+name = "afrou-api"
+type = "webpack"
+account_id = "d5e765dbad99043a3e8036ca5a89e308"
+route = "manager.staging.afrocamgist.com"
+zone_id = "6bc0281f357a08da08708784ba41223f"
+
+
+
+[env.staging]
+workers_dev = true

@@ -1,0 +1,51 @@
+{
+	"name": "advert",
+	"collection_name": "adverts",
+	"properties": {
+		"advert_id": {
+			"type": "string",
+			"required": true,
+			"max": 40
+		},
+		"goal": {
+			"type": "string",
+			"required": true
+		},
+		"audience": {
+			"type": "string",
+			"required": true
+		},
+		"budget": {
+			"type": "string",
+			"required": true
+		},
+		"post": {
+			"type": "number",
+			"required": true
+		},
+		"user_id": {
+			"type": "number",
+			"required": true
+		},
+		"start_date": {
+			"type": "date",
+			"required": true
+		},
+		"end_date": {
+			"type": "date",
+			"required": true
+		},
+		"timestamp": {
+			"type": "number",
+			"required": true
+		},
+		"end_timestamp": {
+			"type": "number",
+			"required": true
+		},
+		"expired": {
+			"type": "boolean",
+			"default": false
+		}
+	}
+}

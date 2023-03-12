@@ -1,0 +1,61 @@
+{
+  "name": "calls",
+  "collection_name": "calls",
+  "properties": {
+    "call_id": {
+        "type": "number",
+        "required": true,
+        "primary_key": true
+    },
+    "caller": {
+        "type": "number",
+        "required": true
+    },
+    "receiver": {
+        "type": "number",
+        "required": true
+    },
+    "call_type": {
+        "type": "enum",
+        "required": true,
+        "enum": [
+          "audio",
+          "video"
+        ],
+        "default": "audio"
+    },
+    "call_status": {
+        "type": "enum",
+        "required": true,
+        "enum": [
+          "missed",
+          "ongoing",
+          "accepted",
+          "rejected",
+          "outgoing"
+        ],
+        "default": "missed"
+    },
+    "call_duration": {
+        "type": "string"
+    },
+    "call_time": {
+        "type": "date",
+        "required": "true",
+        "default": "now"
+    },
+    "call_start_time": {
+      "type": "date",
+      "default": "now"
+    },
+    "call_end_time": {
+      "type": "date",
+      "default": "now"
+    },
+    "created_date": {
+      "type": "date",
+      "required": "true",
+      "default": "now"
+    }
+  }
+}

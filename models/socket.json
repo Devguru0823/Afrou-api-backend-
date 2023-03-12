@@ -1,0 +1,21 @@
+{
+    "name": "socket",
+    "collection_name": "socket",
+    "properties": {
+      "socket": {
+        "type": "string",
+        "required": true
+      },
+      "user_id": {
+        "type": "number",
+        "required": true,
+        "default": 0
+      },
+      "created_date": {
+        "type": "date",
+        "required": "true",
+        "default": "now"
+      }
+    }
+  }
+  
